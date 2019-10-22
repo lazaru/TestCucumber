@@ -2,10 +2,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.lazaru.teste.cucumber</groupId>
+	<groupId>com.lazaru.cucumber</groupId>
 	<artifactId>TestCucumber</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>		
+	</properties>
 	<build>
 		<plugins>
 			<plugin>
@@ -14,6 +17,7 @@
 				<!-- Versão do plugin maven -->
 				<version>3.3</version>
 				<configuration>
+					<encoding>UTF-8</encoding>
 					<!-- Versão do java -->
 					<source>1.8</source>
 					<target>1.8</target>
@@ -21,55 +25,30 @@
 			</plugin>
 		</plugins>
 	</build>
-	<properties>
-		<cucumber.version>1.2.0</cucumber.version>
-	</properties>
+
 	<dependencies>
-		<!-- JUnit -->
-
-		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>5.5.1</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter</artifactId>
-			<version>5.5.1</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- Cucumber -->
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>5.0.0-RC1</version>
+			<version>4.7.4</version>
+			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-core</artifactId>
-			<version>5.0.0-RC1</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+		<!-- cucumber-core-2.3.1.jar cucumber-java-2.3.1.jar cucumber-junit-2.3.1.jar 
+			cucumber-jvm-deps-1.0.6.jar gherkin-5.0.0.jar junit-4.12.jar Cucumber -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
-			<version>5.0.0-RC1</version>
+			<version>4.7.4</version>
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>gherkin</artifactId>
-			<version>7.0.4</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.5.2</version>
+			<scope>test</scope>
 		</dependency>
-
 
 	</dependencies>
 </project>
